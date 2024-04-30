@@ -1,0 +1,24 @@
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 1rem;
+}
+
+.buttons button {
+    width: fit-content;
+    padding: .4rem .8rem;
+    font-size: 1.1rem;
+    border-radius: .25rem;
+    background-color: #232323;
+    color: #F5DEB3;
+    border: 1px solid #F5DEB3;
+    transition: .3s ease-in-out;
+}
+
+.buttons button:hover {
+    cursor: pointer;
+    border: 1px solid transparent;
+    background-color: #F5DEB3;
+    color: #232323;
+}

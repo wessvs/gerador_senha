@@ -1,0 +1,12 @@
+.container {
+    display: grid;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10rem;
+}
+
+.container h1 {
+    display: block;
+}
+
+
