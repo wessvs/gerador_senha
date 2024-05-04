@@ -20,7 +20,7 @@ export default function GeradorDeSenha() {
         let char = '1234567890_)(*&¨%$#@!+/;.?:>qwerrtyuiopasdfghjklçzxcvbnm'
         let length = 15;
         for(let i =0; i < length; i++) {
-            let randInt = getRandomInt(0, char.length + 1)
+            let randInt = getRandomInt(0, char.length)
             let randomChar = char[randInt]
             senha += randomChar
         }
@@ -34,7 +34,7 @@ export default function GeradorDeSenha() {
         e.preventDefault()
         navigator.clipboard.writeText(senhaGerada)
     }
-    
+
     return (
         <>
         <div className={styles.container}>
