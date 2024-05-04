@@ -22,3 +22,11 @@
     background-color: #F5DEB3;
     color: #232323;
 }
+
+p {
+    font-family: monospace;
+    font-size: 2rem;
+    color: aquamarine;
+    letter-spacing: 0.5rem;
+    margin-top: 2rem;
+}
