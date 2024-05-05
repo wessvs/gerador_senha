@@ -69,3 +69,9 @@ p {
 .show {
     display: flex;
 }
+
+#errors {
+    color: rgba(181, 63, 63, 0.876);
+    font-size: 1.2rem;
+    letter-spacing: 0;
+}
