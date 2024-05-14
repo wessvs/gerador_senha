@@ -9,6 +9,7 @@ export default function GeradorDeSenha() {
     const [TextoGerarSenha, setTextoGerarSenha] = useState('Gerar senha')
     const [hidden, setHidden] = useState(true)
     const [errors, setErrors] = useState('')
+    const [passwordSize, setPasswordSize] = useState(8)
     let senha = ''
     let char = ''
 
@@ -41,7 +42,7 @@ export default function GeradorDeSenha() {
             return setErrors('É necessário ao menos um tipo de caracter.')
         }
 
-        for(let i =0; i < length; i++) {
+        for(let i =0; i < passwordSize; i++) {
             let randInt = getRandomInt(0, char.length)
             let randomChar = char[randInt]
             senha += randomChar
@@ -77,6 +78,17 @@ export default function GeradorDeSenha() {
                 <div className={styles.inputs}><input type="checkbox" name="letras" id="letras" defaultChecked /> <label htmlFor="letras" >Letras</label></div>
                 <div className={styles.inputs}><input type="checkbox" name="numeros" id="numeros" defaultChecked/> <label htmlFor="numeros">Números</label></div>
                 <div className={styles.inputs}><input type="checkbox" name="especiais" id="especiais" defaultChecked /> <label htmlFor="especiais">Caracteres Especiais</label></div>
+                <div className={styles.inputs}>
+                    <label htmlFor="passwordSize">Tamanho da senha:</label>
+                    <input 
+                    type="number" 
+                    id="passwordSize" 
+                    class={styles.passwordSize} 
+                    min={8}
+                    value={passwordSize}
+                    onChange={(ev) => setPasswordSize(ev.target.value)}
+                     />
+                </div>
             </div>
                 <p>{senhaGerada}</p>
                 <p id={styles.errors}>{errors}</p>

@@ -5,7 +5,7 @@
     margin: 1rem;
 }
 
-.buttons button {
+.buttons button, .passwordSize {
     width: fit-content;
     padding: .4rem .8rem;
     font-size: 1.1rem;
@@ -74,4 +74,9 @@ p {
     color: rgba(181, 63, 63, 0.876);
     font-size: 1.2rem;
     letter-spacing: 0;
+}
+
+.passwordSize {
+    padding: 0 auto;
+    width: min-content;  
 }
