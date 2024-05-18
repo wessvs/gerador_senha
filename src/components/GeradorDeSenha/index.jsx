@@ -1,5 +1,6 @@
 import { useState } from "react"
 import styles from './index.module.css'
+import Input from "../Input"
 
 const senha = document.getElementById('senha')
 
@@ -10,6 +11,7 @@ export default function GeradorDeSenha() {
     const [hidden, setHidden] = useState(true)
     const [errors, setErrors] = useState('')
     const [passwordSize, setPasswordSize] = useState(8)
+
     let senha = ''
     let char = ''
 
@@ -80,14 +82,7 @@ export default function GeradorDeSenha() {
                 <div className={styles.inputs}><input type="checkbox" name="especiais" id="especiais" defaultChecked /> <label htmlFor="especiais">Caracteres Especiais</label></div>
                 <div className={styles.inputs}>
                     <label htmlFor="passwordSize">Tamanho da senha:</label>
-                    <input 
-                    type="number" 
-                    id="passwordSize" 
-                    class={styles.passwordSize} 
-                    min={8}
-                    value={passwordSize}
-                    onChange={(ev) => setPasswordSize(ev.target.value)}
-                     />
+                    <Input passwordSize={passwordSize} setPasswordSize={setPasswordSize} className={styles.passwordSize}/>
                 </div>
             </div>
                 <p>{senhaGerada}</p>
